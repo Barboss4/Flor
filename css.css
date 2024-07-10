@@ -1,0 +1,245 @@
+:root {
+    --scale: 5; /* Ajuste este valor para aumentar ou diminuir o tamanho da imagem */
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    height: calc(340px * var(--scale));
+    width: calc(300px * var(--scale));
+    position: relative;
+    margin: 200px auto;
+    z-index: 2;
+    filter: drop-shadow(0 0 6px #aaa);
+}
+.wrapper .plant {
+    height: calc(150px * var(--scale));
+    width: calc(6px * var(--scale));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(90px * var(--scale));
+    margin: auto;
+    background: #30862D;
+    z-index: 1;
+    transform-origin: center bottom;
+    animation: lean 3s .5s infinite;
+}
+.wrapper .plant .leaf__one {
+    height: calc(30px * var(--scale));
+    width: calc(30px * var(--scale));
+    background: #30862D;
+    position: relative;
+    top: calc(10px * var(--scale));
+    left: calc(6px * var(--scale));
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transform: rotateZ(-67.5deg);
+    z-index: -2;
+}
+.wrapper .plant .leaf__two {
+    height: calc(26px * var(--scale));
+    width: calc(26px * var(--scale));
+    background: #30862D;
+    position: relative;
+    top: calc(12px * var(--scale));
+    right: calc(26px * var(--scale));
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotateZ(67.5deg);
+}
+.wrapper .plant .leaf__three {
+    height: calc(24px * var(--scale));
+    width: calc(24px * var(--scale));
+    background: #30862D;
+    position: relative;
+    top: calc(22px * var(--scale));
+    left: calc(6px * var(--scale));
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transform: rotateZ(-67.5deg);
+}
+.wrapper .plant .flower {
+    height: calc(80px * var(--scale));
+    width: calc(80px * var(--scale));
+    position: absolute;
+    top: calc(-80px * var(--scale));
+    left: calc(-40px * var(--scale));
+    animation: rotate 3s .5s infinite;
+}
+.wrapper .plant .flower::before {
+    content: "";
+    height: calc(40px * var(--scale));
+    width: calc(40px * var(--scale));
+    position: absolute;
+    top: calc(-30px * var(--scale));
+    left: calc(20px * var(--scale));
+    background: #C2000A;
+    border-radius: 100%;
+    z-index: 11;
+    box-shadow: calc(-37px * var(--scale)) calc(15px * var(--scale)) #C2000A, 
+                calc(-47px * var(--scale)) calc(54px * var(--scale)) #C2000A, 
+                calc(-26px * var(--scale)) calc(89px * var(--scale)) #C2000A, 
+                calc(15px * var(--scale)) calc(93px * var(--scale)) #C2000A, 
+                calc(43px * var(--scale)) calc(63px * var(--scale)) #C2000A, 
+                calc(36px * var(--scale)) calc(21px * var(--scale)) #C2000A;
+}
+.wrapper .plant .flower .head img {
+    height: calc(80px * var(--scale));
+    width: calc(80px * var(--scale));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 50%;
+}
+
+/*
+.wrapper .plant .flower .head { 
+    height: calc(80px * var(--scale));
+    width: calc(80px * var(--scale));
+    position: absolute;
+    border-radius: 100%;
+    background: #E8AD17;
+    box-shadow: 0 0 3px #333;
+    z-index: 10;
+}
+
+
+.wrapper .plant .flower .head .face {  Boca 
+    height: calc(26.6666666667px * var(--scale));
+    width: calc(26.6666666667px * var(--scale));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(10px * var(--scale));
+    margin: auto;
+    border: calc(4px * var(--scale)) transparent solid;
+    border-bottom: calc(4px * var(--scale)) rgb(0, 0, 0) solid;
+    border-right: calc(4px * var(--scale)) black solid;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    z-index: 10;
+    box-sizing: content-box; 
+}
+.wrapper .plant .flower .head .face::before, 
+.wrapper .plant .flower .head .face::after { 
+    content: "";
+    height: calc(10px * var(--scale));
+    width: calc(10px * var(--scale));
+    position: absolute;
+    top: calc(-10px * var(--scale));
+    background: rgb(0, 0, 0);
+    border-radius: 100%;
+}*/
+
+.wrapper .plant .flower .head .face::before {
+    top: calc(8px * var(--scale));
+    left: calc(-16px * var(--scale));
+}
+.wrapper .plant .flower .head .face::after {
+    top: calc(-16px * var(--scale));
+    right: calc(8px * var(--scale));
+}
+.wrapper .pot {
+    height: calc(80px * var(--scale));
+    width: calc(60px * var(--scale));
+    background: #4D2319;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(8px * var(--scale));
+    margin: auto;
+}
+.wrapper .pot .top {
+    height: calc(20px * var(--scale));
+    width: calc(120px * var(--scale));
+    position: absolute;
+    left: calc(-30px * var(--scale));
+    background: #431f16;
+    z-index: 2;
+}
+.wrapper .pot .top::after {
+    content: "";
+    height: calc(14px * var(--scale));
+    width: calc(120px * var(--scale));
+    position: absolute;
+    top: calc(-8px * var(--scale));
+    left: 0;
+    border: 0;
+    border-top: calc(14px * var(--scale)) #220F0B solid;
+    border-radius: 100%;
+}
+.wrapper .pot::before, 
+.wrapper .pot::after {
+    content: "";
+    position: absolute;
+    border-color: #4D2319;
+    border-top-width: calc(40px * var(--scale));
+    border-right-width: calc(15px * var(--scale));
+    border-bottom-width: calc(40px * var(--scale));
+    border-left-width: calc(15px * var(--scale));
+    border-style: solid;
+    border-bottom-color: transparent;
+}
+.wrapper .pot::before {
+    left: calc(-30px * var(--scale));
+    border-left-color: transparent;
+}
+.wrapper .pot::after {
+    right: calc(-30px * var(--scale));
+    border-right-color: transparent;
+}
+@keyframes lean {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(-22.5deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    62.5% {
+        transform: rotate(22.5deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(22.5deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    62.5% {
+        transform: rotate(-22.5deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
