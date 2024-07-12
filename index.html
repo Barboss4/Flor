@@ -8,13 +8,15 @@
 
 </head>
 <body>
-	
+
+<div class="garden"></div>
+
 <div class="wrapper">
     <div class="plant">
         <div class="flower">
             <div class="head">
                 <!-- <div class="face"></div> -->
-				<img src="anna.jpeg" alt="Face da Flor">
+				<img id="musicButton" src="anna.jpeg" alt="Face da Flor">
             </div>
         </div>
         <div class="leaf__one"></div>
@@ -25,3 +27,15 @@
         <div class="top"></div>
     </div>
 </div>
+
+<script> 
+        
+    document.getElementById('musicButton').addEventListener('click', function() {
+        var audio = new Audio('ai-vc-me-quebra.mp3'); // Substitua pelo caminho da sua música
+        audio.play();
+    });
+
+</script>
+
+</body>
+</html>
